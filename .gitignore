@@ -1,0 +1,9 @@
+/TGAS/bin/*.dll
+/TGAS/bin/*.xml
+/TGAS/bin/*.config
+/TGAS/bin/*.pdb
+/TGAS/obj/Debug/*.cache
+/TGAS/obj/Debug/*.txt
+/TGAS/obj/Debug/*.dll
+/TGAS/obj/Debug/*.pdb
+/TGAS/obj/Debug/*.cs
