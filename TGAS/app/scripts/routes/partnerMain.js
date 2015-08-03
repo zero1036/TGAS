@@ -56,9 +56,9 @@ function (angular, orgApp, domReady, iscroll) {
                 templateUrl: '../../views/partner/home.html',
                 controller: 'partnerCtrl'
             })
-            .when('/userDetailWa', {
-                templateUrl: 'views/org/userDetailWa.html',
-                controller: 'userDetailCtrlWa',
+            .when('/v1', {
+                templateUrl: '../../views/partner/v1.html',
+                controller: 'partnerCtrl',
                 access_level: ACCESS_LEVELS.pub
             });// end
 

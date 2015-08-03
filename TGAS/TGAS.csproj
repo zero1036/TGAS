@@ -195,6 +195,7 @@
     <Content Include="app\styles\ionic.min.css" />
     <Content Include="app\views\partner\home.html" />
     <Content Include="app\views\partner\index.html" />
+    <Content Include="app\views\partner\v1.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
