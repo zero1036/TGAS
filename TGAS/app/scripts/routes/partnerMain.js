@@ -2,14 +2,14 @@
     paths: {
         // Angular
         angular: 'http://cdn.bootcss.com/angular.js/1.3.15/angular.min',
-        angular: 'vendor/angular/angular.un',
+        angular: '../vendor/angular/angular.un',
         //cookies: 'vendor/angular/angular-cookies.min',
         //route: 'vendor/angular/angular-route.min',
         //touch: 'vendor/angular/angular-touch.min',
         // domReady
-        domReady: 'vendor/domReady',
+        domReady: '../vendor/domReady',
         // iscroll
-        iscroll: 'vendor/iscroll/iscroll.min'
+        iscroll: '../vendor/iscroll/iscroll.min'
     },
     shim: {
         /*
@@ -33,12 +33,12 @@
 });
 require([
 	'angular',
-	'orgApp',
+	'partnerApp',
 	'domReady',
     'iscroll',
     // 自定义controllers,services,directives,filters都需要在这里添加路径
     //父级控制
-    'controllers/waMainCtrl',
+    '../controllers/partnerCtrl',
     ////子级控制
     //'controllers/orgCtrlWa',
 ],
@@ -53,22 +53,9 @@ function (angular, orgApp, domReady, iscroll) {
         function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
             $routeProvider
             .when('/home', {
-                templateUrl: 'views/home.html',
-                controller: 'waMainCtrl'
+                templateUrl: '../../views/partner/home.html',
+                controller: 'partnerCtrl'
             })
-            //通讯录--部门列表
-            .when('/orgList', {
-                templateUrl: 'views/org/orgList.html',
-                controller: 'orgCtrl',
-                access_level: ACCESS_LEVELS.pub
-            })
-            //通讯录--用户列表
-            .when('/userListWa/:did/', {
-                templateUrl: 'views/org/userListWa.html',
-                controller: 'usersCtrlWa',
-                access_level: ACCESS_LEVELS.pub
-            })
-            //通讯录--用户详细信息
             .when('/userDetailWa', {
                 templateUrl: 'views/org/userDetailWa.html',
                 controller: 'userDetailCtrlWa',
@@ -112,11 +99,11 @@ function (angular, orgApp, domReady, iscroll) {
     ]);
 
     domReady(function () {
-        angular.bootstrap(document, ['eOrderingApp']);
+        angular.bootstrap(document, ['pApp']);
 
-        //angular.element("html").addClass('ng-app: eOrderingApp');
+        //angular.element("html").addClass('ng-app: pApp');
 
-        //$('html').addClass('ng-app: eOrderingApp');
+        //$('html').addClass('ng-app: pApp');
     })
 });
 
