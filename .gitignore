@@ -7,3 +7,9 @@
 /TGAS/obj/Debug/*.dll
 /TGAS/obj/Debug/*.pdb
 /TGAS/obj/Debug/*.cs
+/TGAS.sln.GhostDoc.xml
+/TGAS.v12.suo
+/TGAS/TGAS.csproj.GhostDoc.xml
+/TGAS/TGAS.csproj.user
+/TGAS/Web.Debug.config
+/TGAS/Web.Release.config
