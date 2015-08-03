@@ -114,7 +114,6 @@
   <ItemGroup>
     <Folder Include="app\images\" />
     <Folder Include="app\scripts\vendor\angular\angular-translate-storage-cookie\" />
-    <Folder Include="app\styles\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
@@ -138,9 +137,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\fonts\ionicons.svg" />
     <Content Include="app\login.html" />
-    <Content Include="app\scripts\configs\authConfig.js" />
-    <Content Include="app\scripts\configs\configs.js" />
     <Content Include="app\scripts\controllers\controllers.js" />
     <Content Include="app\scripts\controllers\diamondAssignCtrl.js" />
     <Content Include="app\scripts\controllers\diamondQueryCtrl.js" />
@@ -220,12 +218,17 @@
     <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.min.js" />
     <Content Include="app\scripts\vendor\angular\bootstrap\js\npm.js" />
     <Content Include="app\scripts\vendor\domReady.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic-angular.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic-angular.min.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic.bundle.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic.bundle.min.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic.js" />
+    <Content Include="app\scripts\vendor\ionic\ionic.min.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
     <Content Include="app\scripts\vendor\require.js" />
-    <Content Include="app\scripts\vendor\x2js\.hg_archival.txt" />
-    <Content Include="app\scripts\vendor\x2js\xml2json.js" />
-    <Content Include="app\scripts\vendor\x2js\xml2json.min.js" />
+    <Content Include="app\styles\ionic.css" />
+    <Content Include="app\styles\ionic.min.css" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\org\orgList.html" />
     <Content Include="app\views\org\userDetailWa.html" />
@@ -263,9 +266,9 @@
     <Content Include="app\scripts\vendor\angular\angular-translate\bower.json" />
     <Content Include="app\scripts\vendor\angular\angular-translate\README.md" />
     <Content Include="app\scripts\vendor\angular\angular.min.js.map" />
-    <Content Include="app\scripts\vendor\x2js\.hgtags" />
-    <Content Include="app\scripts\vendor\x2js\.project" />
-    <Content Include="app\scripts\vendor\x2js\bower.json" />
+    <Content Include="app\fonts\ionicons.eot" />
+    <Content Include="app\fonts\ionicons.ttf" />
+    <Content Include="app\fonts\ionicons.woff" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <PropertyGroup>
