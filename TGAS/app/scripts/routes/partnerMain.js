@@ -1,7 +1,7 @@
 ﻿require.config({
     paths: {
         // Angular
-        angular: 'http://cdn.bootcss.com/angular.js/1.3.15/angular.min',
+        //angular: 'http://cdn.bootcss.com/angular.js/1.3.15/angular.min',
         angular: '../vendor/angular/angular.un',
         //cookies: 'vendor/angular/angular-cookies.min',
         //route: 'vendor/angular/angular-route.min',

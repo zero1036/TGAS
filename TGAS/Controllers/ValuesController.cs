@@ -35,5 +35,13 @@ namespace TGAS.Controllers
         public void Delete(int id)
         {
         }
+
+        public HttpResponseMessage yel(int token)
+        {
+            if (token == 123)
+                return Request.CreateResponse(HttpStatusCode.Unauthorized);
+            else
+                return Request.CreateResponse(HttpStatusCode.OK);
+        }
     }
 }
