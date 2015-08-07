@@ -2,26 +2,17 @@
 define(['angular', '../services/commonService', '../services/partnerService'], function (angular) {
     var ctrl = angular.module('partnerCtrls', ['baseServiceModule', 'partnerServiceModule']);
 
-    ctrl.controller('partnerCtrl', ['$scope', '$cookieStore', '$http', 'commonService', 'partnerService', function ($scope, $cookieStore, $http, commonService, partnerService) {
+    ctrl.controller('partnerCtrl', ['$scope', '$cookieStore', '$location', 'commonService', 'httpService', 'partnerService', function ($scope, $cookieStore, $location, commonService, httpService, partnerService) {
 
         $scope.add = function () {
-            //$cookieStore.put('user', { name: "tg" });
+            httpService.doPostToken("PPPartner", 'test1', null).success(function (response) {
+                console.log(response);
+            }).error(function () {
 
-            var token = $cookieStore.get('token');
-
-            $http.post("/api/Values/yel?token=" + 123).success(function (data) {
-                try {
-                    if (data.IsSuccess !== undefined && data.IsSuccess !== null && data.IsSuccess == false) {
-                        alert(data.Message);
-                    }
-                    else {
-                        $scope.menus = data;
-                    }
-                }
-                catch (ex) { }
             });
         };
 
-        $scope.name = partnerService.getPartner(9);
     }]);
+
+    return ctrl;
 });

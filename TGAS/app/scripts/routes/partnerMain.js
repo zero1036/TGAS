@@ -1,7 +1,6 @@
 ﻿require.config({
     paths: {
         // Angular
-        //angular: 'http://cdn.bootcss.com/angular.js/1.3.15/angular.min',
         angular: '../vendor/angular/angular.un',
         //cookies: 'vendor/angular/angular-cookies.min',
         //route: 'vendor/angular/angular-route.min',
@@ -39,26 +38,26 @@ require([
     // 自定义controllers,services,directives,filters都需要在这里添加路径
     //父级控制
     '../controllers/partnerCtrl',
-    ////子级控制
-    //'controllers/orgCtrlWa',
+    '../controllers/loginCtrl',
 ],
-function (angular, orgApp, domReady, iscroll) {
+function (angular, partnerApp, domReady, iscroll) {
     //'use strict';
-    orgApp.constant('ACCESS_LEVELS', {
+    partnerApp.constant('ACCESS_LEVELS', {
         pub: 1,
         user: 2
     });
-
-    orgApp.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
+    //配置路由
+    partnerApp.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
         function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
             $routeProvider
             .when('/home', {
-                templateUrl: '../../views/partner/home.html',
-                controller: 'partnerCtrl'
-            })
-            .when('/v1', {
-                templateUrl: '../../views/partner/v1.html',
+                templateUrl: '/app/views/partner/home.html',
                 controller: 'partnerCtrl',
+                access_level: ACCESS_LEVELS.user
+            })
+            .when('/login', {
+                templateUrl: '/app/views/sys/login.html',
+                controller: 'loginCtrl',
                 access_level: ACCESS_LEVELS.pub
             });// end
 
@@ -76,9 +75,9 @@ function (angular, orgApp, domReady, iscroll) {
                         // 错误处理
                         switch (rejection.status) {
                             case 401:
-                                if (rejection.config.url !== 'api/login')
-                                    // 如果当前不是在登录页面
-                                    $rootScope.$broadcast('auth:loginRequired');
+                                //if (rejection.config.url !== 'api/login')
+                                //    // 如果当前不是在登录页面
+                                $rootScope.$broadcast('auth:loginRequired');
                                 break;
                             case 403:
                                 $rootScope.$broadcast('auth:forbidden');
@@ -89,6 +88,9 @@ function (angular, orgApp, domReady, iscroll) {
                             case 500:
                                 $rootScope.$broadcast('server:error');
                                 break;
+                            case 410:
+                                $rootScope.$broadcast('server:redirect');
+                                break;
                         }
                         return $q.reject(rejection);
                     }
@@ -97,7 +99,26 @@ function (angular, orgApp, domReady, iscroll) {
             });
         }
     ]);
+    //配置监听
+    partnerApp.run(function ($rootScope, $location, authService) {
+        //给$routeChangeStart设置监听
+        $rootScope.$on('$routeChangeStart', function (evt, next, curr) {
+            if (!authService.isAuthorized(next.$$route.access_level)) {
+                window.location.href = '#/login?#redirect=' + location.pathname + location.hash;
+            }
+        });
 
+        //监听验证失败404
+        $rootScope.$on('auth:loginRequired', function (e) {
+            window.location.href = '#/login?#redirect=' + location.pathname + location.hash;
+        });
+
+        //监听微信重定向410
+        $rootScope.$on('server:redirect', function (e) {
+            window.location.reload();
+        });
+    });
+    //domReady
     domReady(function () {
         angular.bootstrap(document, ['pApp']);
 

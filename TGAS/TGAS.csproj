@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\fonts\ionicons.svg" />
+    <Content Include="app\scripts\controllers\loginCtrl.js" />
     <Content Include="app\scripts\controllers\partnerCtrl.js" />
     <Content Include="app\scripts\directives\directives.js" />
     <Content Include="app\scripts\filters\filters.js" />
@@ -192,10 +193,12 @@
     <Content Include="app\scripts\vendor\require.js" />
     <Content Include="app\styles\ionic.css" />
     <Content Include="app\styles\ionic.min.css" />
+    <Content Include="app\views\login.html" />
     <Content Include="app\views\login\login.html" />
     <Content Include="app\views\partner\home.html" />
     <Content Include="app\views\partner\index.html" />
     <Content Include="app\views\partner\v1.html" />
+    <Content Include="app\views\sys\login.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
