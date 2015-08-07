@@ -55,6 +55,16 @@ function (angular, partnerApp, domReady, iscroll) {
                 controller: 'partnerCtrl',
                 access_level: ACCESS_LEVELS.user
             })
+            .when('/yjincrease', {
+                templateUrl: '/app/views/partner/yjincrease.html',
+                controller: 'partnerCtrl',
+                access_level: ACCESS_LEVELS.user
+            })
+            .when('/yjdetails', {
+                templateUrl: '/app/views/partner/yjdetails.html',
+                    controller: 'partnerCtrl',
+                    access_level: ACCESS_LEVELS.user
+                })
             .when('/login', {
                 templateUrl: '/app/views/sys/login.html',
                 controller: 'loginCtrl',
@@ -103,9 +113,9 @@ function (angular, partnerApp, domReady, iscroll) {
     partnerApp.run(function ($rootScope, $location, authService) {
         //给$routeChangeStart设置监听
         $rootScope.$on('$routeChangeStart', function (evt, next, curr) {
-            if (!authService.isAuthorized(next.$$route.access_level)) {
-                window.location.href = '#/login?#redirect=' + location.pathname + location.hash;
-            }
+            //if (!authService.isAuthorized(next.$$route.access_level)) {
+            //    window.location.href = '#/login?#redirect=' + location.pathname + location.hash;
+            //}
         });
 
         //监听验证失败404

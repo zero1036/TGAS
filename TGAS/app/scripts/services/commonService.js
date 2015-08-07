@@ -13,7 +13,7 @@ define(['angular'], function (services) {
                     //return token != undefined && token != null;
 
                     var t = $cookieStore.get('__RequestVerificationToken');
-                    if (!t) {
+                    if (t == undefined) {
                         return false;
                     }
                 }
@@ -180,7 +180,7 @@ define(['angular'], function (services) {
 
         //登出
         service.signout = function () {
-            return httpService.doPostToken(api, "Logout");
+            return httpService.doPostToken("Home", "CancelBinding", null);
         };
 
         return service;

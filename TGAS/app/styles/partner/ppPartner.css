@@ -1,0 +1,621 @@
+﻿/*页面定制布局*/
+#jp-content {
+    font-size: 0.75rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 47%;
+    color: #fff;
+    z-index: 3;
+}
+
+    #jp-content span {
+        font-size: 1.5rem;
+        color: yellow;
+    }
+
+#img-jp-cloud {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: url(../../images/partner/jp-cloud.png) no-repeat center 0;
+    background-size: cover;
+    height: 250px;
+}
+
+    #img-jp-cloud > * {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        position: relative;
+    }
+
+    #img-jp-cloud > p {
+        bottom: -90px;
+        font-size: 1rem;
+    }
+
+    #img-jp-cloud > a:nth-child(2) {
+        bottom: -110px;
+        width: 90%;
+    }
+
+    #img-jp-cloud > a:nth-child(3) {
+        bottom: -130px;
+    }
+
+#ir-head-bc {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    background: #44ccb4 url(../../images/partner/ir-head.png) no-repeat center 0;
+    background-size: contain;
+    overflow: hidden;
+}
+
+    #ir-head-bc > div {
+        position: absolute;
+        bottom: 15px;
+        border: 1px dashed #fff;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 20px;
+        color: #fff;
+        font-size: 0.8rem;
+    }
+
+        #ir-head-bc > div span {
+            color: yellow;
+        }
+
+#ir-content {
+    width: 100%;
+    height: 60%;
+    top: 60%;
+    position: absolute;
+}
+
+#js-content {
+    width: 90%;
+    height: 40%;
+    top: 55%;
+    left: 5%;
+    position: absolute;
+}
+
+#ir2-footer {
+    background-color: #3a546f;
+}
+
+#ir2-footer {
+    background-color: #3a546f;
+}
+
+    #ir2-footer > div {
+        padding: 0px 20px 30px 20px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+        #ir2-footer > div > * {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #ir2-footer > div > img {
+            width: 60px;
+            position: relative;
+            bottom: -16px;
+        }
+
+#div-qrcode {
+    position: fixed;
+    /*display: none;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    background-color: rgba(0,0,0,0.75);
+    color: #fff;
+}
+
+    #div-qrcode > .img-finger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        /*height: 60px;
+        width: 116px;*/
+    }
+
+    #div-qrcode > .p-f-f {
+        font-family: STXinwei;
+    }
+
+    #div-qrcode > .btn-qcx > span {
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 8px;
+    }
+
+/*#ir2-footer > div > p:nth-child(2) {
+            font-size: 13px;
+        }*/
+/*页面定制布局 完*/
+
+/*table-partner*/
+th {
+    font-weight: normal;
+}
+
+.table-partner {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border-right: 1px solid #f2f2f2;
+    background-color: transparent;
+}
+
+    .table-partner > thead {
+        background-color: #6ee4c4;
+        color: #fff;
+    }
+
+    .table-partner > tbody > tr > th,
+    .table-partner > tbody > tr > td {
+        border-bottom: 1px solid #f2f2f2;
+        border-left: 1px solid #f2f2f2;
+    }
+
+    .table-partner > thead > tr > th,
+    .table-partner > tbody > tr > th,
+    .table-partner > tfoot > tr > th,
+    .table-partner > thead > tr > td,
+    .table-partner > tbody > tr > td,
+    .table-partner > tfoot > tr > td {
+        padding: 5px 3px;
+        text-align: center;
+    }
+/*table-partner完*/
+
+/*合伙人全局背景暗绿色*/
+.bg-green {
+    background-color: #44ccb4;
+}
+/*合伙人全局背景暗绿色完*/
+
+/*column模型值*/
+.uc-money .column {
+    padding: 10px 0 10px 20px;
+    text-align: left;
+    margin-left: 0;
+}
+
+    .uc-money .column ~ .column {
+        border-left: 1px solid #eaeaea;
+    }
+
+.uc-money .column {
+    border-bottom: 1px solid #eaeaea;
+}
+/*column模型值 完*/
+
+/*图像布局*/
+.jp-pp-2-join {
+    position: absolute;
+    bottom: 157px;
+    left: -20%;
+    width: 100%;
+    height: 300px;
+}
+
+.jp-pp-3-joinf {
+    position: absolute;
+    bottom: 157px;
+    left: -20%;
+    width: 100%;
+    height: 300px;
+}
+
+.jp-pp-4-joins {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+}
+
+.rs-bg-receives {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    /*overflow: hidden;*/
+}
+
+.baodian-logo-yjdetail {
+    width: 65px;
+    height: 65px;
+}
+
+.baodian-logo-yjincrease {
+    margin: 16px auto;
+    width: 90px;
+    height: 90px;
+}
+/*图像布局 完*/
+
+/*图像*/
+.img-jp-pp-2 {
+    background: url(../../images/partner/jp-2.png) no-repeat center 0;
+    background-size: contain;
+}
+
+.img-jp-pp-3 {
+    background: url(../../images/partner/jp-3.png) no-repeat center 0;
+    background-size: contain;
+}
+
+.img-jp-pp-4 {
+    background: url(../../images/partner/jp-4.png) no-repeat center 0;
+    background-size: contain;
+}
+
+.img-rs-bg {
+    background: url(../../images/partner/rs-bg.png) no-repeat center 0;
+    background-size: cover;
+}
+
+.img-baodian-logo {
+    background: url(../../images/partner/baodian-logo.png) no-repeat center 0;
+    background-size: contain;
+}
+
+/*小P像完*/
+
+/*文本压盖线样式*/
+.text-on-line > .on-line {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-bottom: 2px solid #44ccb4;
+}
+
+.text-on-line > .on-text {
+    position: relative;
+    text-align: center;
+    top: -13px;
+}
+
+    .text-on-line > .on-text > span {
+        background-color: #fff;
+        color: #44ccb4;
+    }
+/*文本压盖线样式完*/
+
+/*合伙人是什么连接*/
+.a-partner-link {
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+}
+/*合伙人是什么连接 完*/
+
+/*合伙人信息面板头*/
+.partner-content {
+    padding: 0.8rem 1.1rem 0.6rem 1.1rem;
+    background-color: #6ee4c4;
+    position: relative;
+}
+
+    .partner-content p {
+        color: #ffffff;
+    }
+
+        .partner-content p:nth-child(2) {
+            margin-top: 10px;
+            font-size: 3rem;
+        }
+/*合伙人信息面板头完*/
+
+/*模拟礼物框*/
+.gift-box {
+    /*height: 180px;*/
+}
+
+    .gift-box > .icon {
+        display: block;
+        position: relative;
+        bottom: -10px;
+        color: #44ccb4;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .gift-box > .gift-box-c {
+        /*height: inherit;*/
+        border: 2px solid #44ccb4;
+        padding: 10px;
+        font-size: 12px;
+    }
+/*模拟礼物框完*/
+
+/*扩展Panel样式*/
+.partner-epanel {
+    margin: 10px;
+    border: 1px solid #f2f2f2;
+}
+
+.partner-epanel-btn {
+    position: relative;
+    background-color: #e1e1e1;
+    padding: 10px;
+}
+
+    .partner-epanel-btn:active {
+        background-color: #cdcdcd;
+    }
+
+    .partner-epanel-btn .icon {
+        /*font-size: 20px;*/
+        /*color: #fff;*/
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        /*background-color: #c4c7c9;*/
+        padding: 3px;
+        border-radius: 50%;
+    }
+
+.partner-epanel-content {
+    background-color: #f9f9f9;
+}
+
+    .partner-epanel-content > .info {
+        background-color: #eeeeee;
+        padding: 10px 15px 10px 15px;
+        font-size: 0.8rem;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .partner-epanel-content > .level {
+        padding: 10px 10px 0px 10px;
+    }
+
+        .partner-epanel-content > .level > div {
+            display: inline-block;
+        }
+
+            .partner-epanel-content > .level > div:nth-child(1) {
+                position: relative;
+                bottom: 15px;
+                width: 30%;
+            }
+
+            .partner-epanel-content > .level > div:nth-child(2) {
+                width: 30%;
+            }
+
+            .partner-epanel-content > .level > div:nth-child(3) {
+                width: 36%;
+            }
+
+/*扩展Panel样式 完*/
+
+/*邀请页，定制radio选择组*/
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.job-modal-body .partner-form i,
+.partner-form .preferences-items i,
+.partner-form :after, .partner-form :before {
+    margin: 0;
+    padding: 0;
+}
+
+.partner-form .label {
+    display: block;
+    margin-bottom: 6px;
+    line-height: 19px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+}
+
+.partner-form .button,
+.partner-form .checkbox,
+.partner-form .input,
+.partner-form .radio,
+.partner-form .select,
+.partner-form .textarea,
+.partner-form .toggle {
+    position: relative;
+    display: block;
+    font-weight: 400;
+}
+
+.partner-form .checkbox,
+.partner-form .radio {
+    /*margin-bottom: 20px;*/
+    padding-left: 30px;
+    padding-right: 55px;
+    line-height: 25px;
+    /*color: #0c4757;*/
+    cursor: pointer;
+    font-size: 13px;
+}
+
+    .partner-form .button.state-disabled, .partner-form .checkbox.state-disabled, .partner-form .input.state-disabled input, .partner-form .radio.state-disabled, .partner-form .select.state-disabled, .partner-form .textarea.state-disabled, .partner-form .toggle.state-disabled {
+        cursor: default !important;
+        opacity: 0.6 !important;
+    }
+
+.partner-form .state-disabled.checkbox input + i:after,
+.partner-form .state-disabled.checkbox input:checked + i,
+.partner-form .state-disabled.radio input + i:after,
+.partner-form .state-disabled.radio input:checked + i,
+.partner-form .state-disabled.toggle input:checked + i {
+    border-color: #47A8C0 !important;
+    color: #333 !important;
+}
+
+.partner-form .checkbox.checkbox-inline,
+.partner-form .radio.radio-inline {
+    display: inline-block;
+}
+
+.partner-form .checkbox input,
+.partner-form .radio input {
+    position: absolute;
+    left: -9999px;
+}
+
+.partner-form .checkbox i,
+.partner-form .radio i {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: block;
+    width: 17px;
+    height: 17px;
+    outline: 0;
+    border-width: 1px;
+    border-style: solid;
+    /*background: #9cd9e8;*/
+}
+
+.partner-form .radio i {
+    border-radius: 50%;
+}
+
+.partner-form .checkbox i,
+.partner-form .icon-append,
+.partner-form .icon-prepend,
+.partner-form .input input,
+.partner-form .radio i,
+.partner-form .select select,
+.partner-form .textarea textarea,
+.partner-form .toggle i {
+    border-color: #cdcdcd;
+    transition: border-color .3s;
+    -webkit-transition: border-color .3s;
+}
+
+.partner-form .checkbox input:checked + i,
+.partner-form .radio input:checked + i, .partner-form .toggle input:checked + i {
+    border-color: #47A8C0;
+}
+
+.partner-form .checkbox input + i:after, .partner-form .radio input + i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .1s;
+    -webkit-transition: opacity .1s;
+}
+
+.partner-form .radio input + i:after {
+    content: '';
+    top: 3px;
+    left: 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.partner-form .radio input + i:after {
+    background-color: #44ccb4;
+}
+
+.partner-form .checkbox input:checked + i:after,
+.partner-form .radio input:checked + i:after {
+    opacity: 1;
+}
+
+.partner-form .checkbox input + i:after {
+    content: '\f00c';
+    top: -3px;
+    left: 1px;
+    width: 15px;
+    height: 15px;
+    font: 400 16px/19px FontAwesome;
+    text-align: center;
+}
+
+.partner-form .input-panel {
+    position: relative;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+    .partner-form .input-panel:active {
+        background-color: #fff;
+    }
+
+.partner-form .btn-assist {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    background-color: #44ccb4;
+    color: #fff;
+    padding: 0px 8px;
+    border-radius: 18px;
+    letter-spacing: 0;
+    font-size: 0.9rem;
+}
+/*邀请页，定制radio选择组完*/
+
+/*圆形加号*/
+.circle-add {
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: #b6cbe0;
+    color: #4b6784;
+    line-height: 24px;
+    display: block;
+    margin: 0 auto;
+}
+/*圆形加号 完*/
+
+/*合伙人首页右上角icon按钮*/
+.partner-icon-list {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}
+/*合伙人首页右上角icon按钮 完*/
+
+/*合伙人暂停佣金页内容*/
+.partner-stop-content {
+    height: 150px;
+    width: 240px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .partner-stop-content a {
+        width: 105px;
+        padding: 8px 8px;
+    }
+/*合伙人暂停佣金页内容 完*/

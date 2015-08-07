@@ -1,0 +1,208 @@
+﻿/*border*/
+.bd-left {
+    border-left: 1px solid;
+}
+
+.bd-right {
+    border-right: 1px solid;
+}
+
+.bd-top {
+    border-top: 1px solid;
+}
+
+.bd-bottom {
+    border-bottom: 1px solid;
+}
+
+.bd-white {
+    border-color: #ffffff;
+}
+
+.bd-white-50 {
+    border-color: rgba(250,250,250,0.5);
+}
+
+.bd-gray {
+    border-color: #e9e9e9;
+}
+/*border 完*/
+
+/*圆形边框*/
+.circle-border {
+    border-radius: 100%;
+    text-align: center;
+    padding: 2px;
+}
+
+    .circle-border.info {
+        font-size: 0.8em;
+        color: #fff;
+        border: 1px solid #d6d6d6;
+        background-color: #d6d6d6;
+    }
+
+    .circle-border.icon-primary {
+        color: #45b8ef;
+        border: 2.5px solid #45b8ef;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-white-border {
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-gray-border {
+        color: gray;
+        border: 1px solid gray;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-smoke-border {
+        color: #8d9eb0;
+        border: 1px solid #8d9eb0;
+        background-color: rgba(0,0,0,0);
+    }
+/*圆形边框 完*/
+
+/*圆形背景*/
+.circle-bg {
+    border-radius: 100%;
+    text-align: center;
+    padding: 1px;
+}
+
+    .circle-bg.radius-30 {
+        border-radius: 30% !important;
+    }
+
+    .circle-bg.radius-40 {
+        border-radius: 40% !important;
+    }
+
+    .circle-bg.radius-80 {
+        border-radius: 80% !important;
+    }
+
+    .circle-bg:active {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .circle-bg.white-primary {
+        font-size: 0.9em;
+        color: #45b8ef;
+        background-color: #fff;
+    }
+
+    .circle-bg.primary-white {
+        font-size: 0.9em;
+        color: #fff;
+        background-color: #45b8ef;
+    }
+
+    .circle-bg.white-success-s {
+        font-size: 0.8em;
+        color: #fff;
+        background-color: #44ccb4;
+    }
+
+    .circle-bg.success-s-white {
+        font-size: 0.8em;
+        color: #44ccb4;
+        background-color: #fff;
+        font-weight: bold;
+    }
+
+    .circle-bg.white-gray {
+        font-size: 0.9em;
+        color: gray;
+        background-color: #fff;
+    }
+
+    .circle-bg.gray-white {
+        font-size: 0.9em;
+        color: #ffffff;
+        background-color: gray;
+    }
+
+    .circle-bg.white-star {
+        font-size: 0.9em;
+        color: #ffba10;
+        background-color: #fff;
+    }
+
+    .circle-bg.star-white {
+        font-size: 0.9em;
+        color: #ffffff;
+        background-color: #ffba10;
+    }
+
+    .circle-bg.white-danger-d {
+        font-size: 0.8em;
+        color: #fff;
+        background-color: #ea3759;
+    }
+
+    .circle-bg.danger-d-white {
+        font-size: 0.8em;
+        color: #ea3759;
+        background-color: #fff;
+        font-weight: bold;
+    }
+/*圆形背景 完*/
+
+/*圆形边框*/
+.circle-border {
+    border-radius: 100%;
+    text-align: center;
+    padding: 2px;
+}
+
+    .circle-border.wh-100 {
+        height: 100px;
+        width: 100px;
+    }
+
+    .circle-border.info {
+        font-size: 0.8em;
+        color: #fff;
+        border: 1px solid #d6d6d6;
+        background-color: #d6d6d6;
+    }
+
+    .circle-border.icon-primary {
+        color: #45b8ef;
+        border: 2.5px solid #45b8ef;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-danager-border {
+        color: #ea3759;
+        border: 2px solid #ea3759;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-white-border {
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-gray-border {
+        color: gray;
+        border: 1px solid gray;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .circle-border.icon-smoke-border {
+        color: #8d9eb0;
+        border: 1px solid #8d9eb0;
+        background-color: rgba(0,0,0,0);
+    }
+/*圆形边框 完*/
+
