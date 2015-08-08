@@ -28,7 +28,8 @@
         //touch: {
         //    deps: ['angular']
         //},
-    }
+    },
+    waitSeconds: 0
 });
 require([
 	'angular',
@@ -50,6 +51,11 @@ function (angular, partnerApp, domReady, iscroll) {
     partnerApp.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
         function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
             $routeProvider
+            .when('/', {
+                templateUrl: '/app/views/partner/home.html',
+                controller: 'partnerCtrl',
+                access_level: ACCESS_LEVELS.user
+            })
             .when('/home', {
                 templateUrl: '/app/views/partner/home.html',
                 controller: 'partnerCtrl',
@@ -62,9 +68,9 @@ function (angular, partnerApp, domReady, iscroll) {
             })
             .when('/yjdetails', {
                 templateUrl: '/app/views/partner/yjdetails.html',
-                    controller: 'partnerCtrl',
-                    access_level: ACCESS_LEVELS.user
-                })
+                controller: 'partnerCtrl',
+                access_level: ACCESS_LEVELS.user
+            })
             .when('/login', {
                 templateUrl: '/app/views/sys/login.html',
                 controller: 'loginCtrl',
