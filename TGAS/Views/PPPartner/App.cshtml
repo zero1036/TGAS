@@ -18,10 +18,81 @@
     <!--默认使用webkit内核进行渲染-->
     <meta name="renderer" content="webkit">
     <title>PPmoney理财平台</title>
+    <style>
+        #footer {
+            position: fixed;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            background-color: #06d3c2;
+            color: white;
+            padding: 0;
+            border-top: 1px solid #1edece;
+        }
+
+
+            #footer div.column {
+                text-align: center;
+                height: 48px;
+                color: #ffffff;
+                text-shadow: 1px 1px 4px #0d9c90;
+            }
+
+                #footer div.column:active {
+                    background-color: #1edece;
+                    text-shadow: none;
+                }
+    </style>
 </head>
 <body ng-controller="partnerCtrl">
+    <div id="wi-div-waiting">
+        <div class="spinner">
+            <div class="cube cube0"></div>
+            <div class="cube cube1"></div>
+            <div class="cube cube2"></div>
+            <div class="cube cube3"></div>
+            <div class="cube cube4"></div>
+            <div class="cube cube5"></div>
+            <div class="cube cube6"></div>
+            <div class="cube cube7"></div>
+            <div class="cube cube8"></div>
+            <div class="cube cube9"></div>
+            <div class="cube cube10"></div>
+            <div class="cube cube11"></div>
+            <div class="cube cube12"></div>
+            <div class="cube cube13"></div>
+            <div class="cube cube14"></div>
+            <div class="cube cube15"></div>
+        </div>
+    </div>
     <div ng-view=""></div>
+    <div id="footer">
+        <div class="row">
+            <a href="#/home">
+                <div class="column column-4 p10">
+                    <span>PP合伙人</span>
+                </div>
+            </a>
+            <a href="#/yjdetails">
+                <div class="column column-4 p10">
+                    <span>佣金详情</span>
+                </div>
+            </a>
+            <a href="#/yjincrease">
+                <div class="column column-4 p10">
+                    <span>佣金提升</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    @*首先加载weixin-loading*@
+    <link rel="stylesheet" href="/app/styles/weixin-loading.css" />
+
     <link rel="stylesheet" href="/app/styles/base.css" />
+    <link rel="stylesheet" href="/app/styles/animations.css" />
+    <link rel="stylesheet" href="/app/styles/weixin-grid.css" />
     <link rel="stylesheet" href="/app/styles/weixin-grid.css" />
     <link rel="stylesheet" href="/app/styles/weixin-panel.css" />
     <link rel="stylesheet" href="/app/styles/weixin-btn.css" />
@@ -30,4 +101,3 @@
     <script data-main="/app/scripts/routes/partnerMain" src="/app/scripts/vendor/require.js"></script>
 </body>
 </html>
-

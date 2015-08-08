@@ -19,11 +19,11 @@ define(['angular'], function (angular) {
         }
     });
     //等待视图
-    pdirectives.directive("waitingview", function () {
+    pdirectives.directive("waitingView", function () {
         return {
             restrict: "E",
             replace: true,
-            templateUrl: 'views/Sys/waitingView.html'
+            templateUrl: 'views/sys/waiting.html'
         }
     });
     //wa主框架视图

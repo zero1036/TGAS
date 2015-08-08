@@ -1,5 +1,5 @@
 ﻿'use strict';
 
-define(['angular'], function (angular) {
-    return angular.module('pApp', ['partnerCtrls', 'authCtrls', 'ngRoute', 'ngCookies', 'ngTouch']);
+define(['angular', 'meloading'], function (angular, meloading) {
+    return angular.module('pApp', ['partnerCtrls', 'authCtrls', 'ngRoute', 'ngCookies', 'ngTouch', 'me-pageloading']);
 });

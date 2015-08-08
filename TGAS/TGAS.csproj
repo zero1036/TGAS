@@ -171,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\font\ionicons.svg" />
+    <Content Include="app\images\pplogo.png" />
     <Content Include="app\scripts\controllers\loginCtrl.js" />
     <Content Include="app\scripts\controllers\partnerCtrl.js" />
     <Content Include="app\scripts\directives\directives.js" />
@@ -223,6 +224,7 @@
     <Content Include="app\scripts\vendor\ionic\ionic.min.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
+    <Content Include="app\scripts\vendor\me-pageloading.min.js" />
     <Content Include="app\scripts\vendor\require.js" />
     <Content Include="app\styles\animations.css" />
     <Content Include="app\styles\base.css" />
@@ -231,6 +233,7 @@
     <Content Include="app\styles\ionic.min.css" />
     <Content Include="app\styles\islider.css" />
     <Content Include="app\styles\layout.css" />
+    <Content Include="app\styles\weixin-loading.css" />
     <Content Include="app\styles\navIcon.css" />
     <Content Include="app\styles\page.css" />
     <Content Include="app\styles\partner\partnerinfo.css" />
@@ -256,6 +259,7 @@
     <Content Include="app\views\partner\yjdetails.html" />
     <Content Include="app\views\partner\yjincrease.html" />
     <Content Include="app\views\sys\login.html" />
+    <Content Include="app\views\sys\loading.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -275,7 +279,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\images\" />
     <Folder Include="app\scripts\vendor\angular\angular-translate-storage-cookie\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
