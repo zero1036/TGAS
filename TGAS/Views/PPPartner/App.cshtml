@@ -100,7 +100,7 @@
     <link rel="stylesheet" href="/app/styles/partner/partnermain.css" />
 
     @{
-        var IsBuild = true;
+        var IsBuild = false;
         var DataMainPath = IsBuild ? "/app/scripts/build/partnerMain-build" : "/app/scripts/routes/partnerMain";
         <script data-main="@DataMainPath" src="/app/scripts/build/require.js"></script>
     }
