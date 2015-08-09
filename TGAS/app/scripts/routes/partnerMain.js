@@ -1,6 +1,5 @@
 ﻿require.config({
     paths: {
-        snap: 'http://cdn.staticfile.org/snap.svg/0.2.0/snap.svg-min',
         // Angular
         angular: '../vendor/angular/angular.un',
         //cookies: 'vendor/angular/angular-cookies.min',
@@ -10,8 +9,6 @@
         domReady: '../vendor/domReady',
         // iscroll
         iscroll: '../vendor/iscroll/iscroll.min',
-
-        meloading: '../vendor/me-pageloading.min'
     },
     shim: {
         /*
@@ -21,7 +18,7 @@
         angular: {
             //deps: ['jquery'],
             exports: 'angular'
-        },
+        }
         //cookies: {
         //    deps: ['angular']
         //},
@@ -31,9 +28,6 @@
         //touch: {
         //    deps: ['angular']
         //},
-        meloading: {
-            deps: ['snap', 'angular']
-        }
     },
     waitSeconds: 0
 });
@@ -42,13 +36,12 @@ require([
 	'partnerApp',
 	'domReady',
     'iscroll',
-    'meloading',
-    // 自定义controllers,services,directives,filters都需要在这里添加路径
+     // 自定义controllers,services,directives,filters都需要在这里添加路径
     //父级控制
     '../controllers/partnerCtrl',
     '../controllers/loginCtrl',
 ],
-function (angular, partnerApp, domReady, iscroll, meloading) {
+function (angular, partnerApp, domReady, iscroll) {
     var loading = document.getElementById("wi-div-waiting");
     loading.style.display = "none";
 
@@ -58,71 +51,35 @@ function (angular, partnerApp, domReady, iscroll, meloading) {
         user: 2
     });
     //配置路由
-    partnerApp.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS', 'mePageLoadingProvider',
-        function ($routeProvider, $httpProvider, ACCESS_LEVELS, mePageLoadingProvider) {
-            mePageLoadingProvider.effect = "Spill";
+    partnerApp.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
+        function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
             $routeProvider
             .when('/', {
                 templateUrl: '/app/views/partner/home.html',
                 controller: 'partnerCtrl',
-                access_level: ACCESS_LEVELS.user,
-                //resolve: {
-                //    data: ['$q', function ($q) {
-                //        var defer = $q.defer();
-                //        setTimeout(function () {
-                //            defer.resolve('partnerCtrl');
-                //        }, 500);
-                //        return defer.promise;
-                //    }]
-                //}
+                access_level: ACCESS_LEVELS.user
             })
             .when('/home', {
                 templateUrl: '/app/views/partner/home.html',
                 controller: 'partnerCtrl',
-                access_level: ACCESS_LEVELS.user,
-                resolve: {
-                    data: ['$q', function ($q) {
-                        var defer = $q.defer();
-                        setTimeout(function () {
-                            defer.resolve('partnerCtrl');
-                        }, 500);
-                        return defer.promise;
-                    }]
-                }
+                access_level: ACCESS_LEVELS.user
             })
             .when('/yjincrease', {
                 templateUrl: '/app/views/partner/yjincrease.html',
                 controller: 'partnerCtrl',
-                access_level: ACCESS_LEVELS.user,
-                resolve: {
-                    data: ['$q', function ($q) {
-                        var defer = $q.defer();
-                        setTimeout(function () {
-                            defer.resolve('partnerCtrl');
-                        }, 500);
-                        return defer.promise;
-                    }]
-                }
+                access_level: ACCESS_LEVELS.user
             })
             .when('/yjdetails', {
                 templateUrl: '/app/views/partner/yjdetails.html',
                 controller: 'partnerCtrl',
                 access_level: ACCESS_LEVELS.user,
-                resolve: {
-                    data: ['$q', function ($q) {
-                        var defer = $q.defer();
-                        setTimeout(function () {
-                            defer.resolve('partnerCtrl');
-                        }, 500);
-                        return defer.promise;
-                    }]
-                }
             })
             .when('/login', {
                 templateUrl: '/app/views/sys/login.html',
                 controller: 'loginCtrl',
                 access_level: ACCESS_LEVELS.pub
-            });// end
+            })
+            .otherwise({ redirectTo: '/' });
 
 
             $httpProvider.defaults.withCredentials = true;
@@ -186,7 +143,6 @@ function (angular, partnerApp, domReady, iscroll, meloading) {
         angular.bootstrap(document, ['pApp']);
 
         //angular.element("html").addClass('ng-app: pApp');
-
         //$('html').addClass('ng-app: pApp');
     })
 });
