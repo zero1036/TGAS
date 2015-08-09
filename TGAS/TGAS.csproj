@@ -170,7 +170,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\font\ionicons.svg" />
+    <Content Include="app\font\icomoon.svg" />
     <Content Include="app\images\pplogo.png" />
     <Content Include="app\scripts\build\partnerMain-build.js" />
     <Content Include="app\scripts\controllers\loginCtrl.js" />
@@ -219,12 +219,6 @@
     <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.min.js" />
     <Content Include="app\scripts\vendor\angular\bootstrap\js\npm.js" />
     <Content Include="app\scripts\vendor\domReady.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic-angular.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic-angular.min.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic.bundle.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic.bundle.min.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic.js" />
-    <Content Include="app\scripts\vendor\ionic\ionic.min.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
@@ -287,9 +281,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="app\font\ionicons.eot" />
-    <Content Include="app\font\ionicons.ttf" />
-    <Content Include="app\font\ionicons.woff" />
     <Content Include="app\scripts\vendor\angular\angular-animate.min.js.map" />
     <Content Include="app\scripts\vendor\angular\angular-aria.min.js.map" />
     <Content Include="app\scripts\vendor\angular\angular-cookies.min.js.map" />
@@ -307,6 +298,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\PPPartner\App.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\font\icomoon.eot" />
+    <Content Include="app\font\icomoon.ttf" />
+    <Content Include="app\font\icomoon.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
