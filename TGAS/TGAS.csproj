@@ -304,6 +304,9 @@
     <Content Include="app\font\icomoon.ttf" />
     <Content Include="app\font\icomoon.woff" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\scripts\vendor\snap.svg-min.js" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

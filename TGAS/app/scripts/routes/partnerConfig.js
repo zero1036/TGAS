@@ -26,6 +26,7 @@
     out: "../build/partnerMain-build.js",
     removeCombined: true,
     paths: {
+        snap: '../vendor/snap.svg-min',
         // Angular
         angular: '../vendor/angular/angular.min',
         cookies: '../vendor/angular/angular-cookies.min',
@@ -35,6 +36,8 @@
         domReady: '../vendor/domReady',
         // iscroll
         iscroll: '../vendor/iscroll/iscroll.min',
+
+        meloading: '../vendor/me-pageloading.min'
     },
     shim: {
         /*
@@ -53,6 +56,9 @@
         },
         touch: {
             deps: ['angular']
+        },
+        meloading: {
+            deps: ['snap', 'angular']
         }
     },
     waitSeconds: 0
