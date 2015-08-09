@@ -1,4 +1,4 @@
-﻿'use strict'
+﻿//'use strict'
 define(['angular', '../services/commonService'], function (angular) {
     var ps = angular.module('partnerServiceModule', ['baseServiceModule']);
 

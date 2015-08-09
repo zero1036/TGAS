@@ -1,36 +1,36 @@
-﻿require.config({
-    paths: {
-        // Angular
-        angular: '../vendor/angular/angular.un',
-        //cookies: 'vendor/angular/angular-cookies.min',
-        //route: 'vendor/angular/angular-route.min',
-        //touch: 'vendor/angular/angular-touch.min',
-        // domReady
-        domReady: '../vendor/domReady',
-        // iscroll
-        iscroll: '../vendor/iscroll/iscroll.min',
-    },
-    shim: {
-        /*
-         *对引入的类库，表明依赖关系，并暴露名称
-         *需要把此处的名字，在app.js文件中define写上才能使用
-         */
-        angular: {
-            //deps: ['jquery'],
-            exports: 'angular'
-        }
-        //cookies: {
-        //    deps: ['angular']
-        //},
-        //route: {
-        //    deps: ['angular']
-        //},
-        //touch: {
-        //    deps: ['angular']
-        //},
-    },
-    waitSeconds: 0
-});
+﻿//require.config({
+//    paths: {
+//        // Angular
+//        angular: '../vendor/angular/angular',
+//        cookies: '../vendor/angular/angular-cookies',
+//        route: '../vendor/angular/angular-route',
+//        touch: '../vendor/angular/angular-touch',
+//        // domReady
+//        domReady: '../vendor/domReady',
+//        // iscroll
+//        iscroll: '../vendor/iscroll/iscroll'
+//    },
+//    shim: {
+//        /*
+//         *对引入的类库，表明依赖关系，并暴露名称
+//         *需要把此处的名字，在app.js文件中define写上才能使用
+//         */
+//        angular: {
+//            //deps: ['jquery'],
+//            exports: 'angular'
+//        },
+//        cookies: {
+//            deps: ['angular']
+//        },
+//        route: {
+//            deps: ['angular']
+//        },
+//        touch: {
+//            deps: ['angular']
+//        }
+//    },
+//    waitSeconds: 0
+//});
 require([
 	'angular',
 	'partnerApp',
@@ -42,10 +42,6 @@ require([
     '../controllers/loginCtrl',
 ],
 function (angular, partnerApp, domReady, iscroll) {
-    var loading = document.getElementById("wi-div-waiting");
-    loading.style.display = "none";
-
-    //'use strict';
     partnerApp.constant('ACCESS_LEVELS', {
         pub: 1,
         user: 2
@@ -140,10 +136,13 @@ function (angular, partnerApp, domReady, iscroll) {
     });
     //domReady
     domReady(function () {
+        var loading = document.getElementById("wi-div-waiting");
+        loading.style.display = "none";
+
         angular.bootstrap(document, ['pApp']);
 
         //angular.element("html").addClass('ng-app: pApp');
         //$('html').addClass('ng-app: pApp');
-    })
+    });
 });
 

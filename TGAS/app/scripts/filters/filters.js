@@ -1,5 +1,4 @@
 define(['angular'], function (angular) {
-    'use strict';
     var pFilters = angular.module('filters', []);
     //过滤器——过滤集合索引等于目标值
     pFilters.filter('filterT1', function () {

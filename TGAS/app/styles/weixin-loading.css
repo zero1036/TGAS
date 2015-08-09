@@ -6,7 +6,7 @@
 *******************************/
 
 .cube {
-    background-color: #f0ad4e;
+    background-color: #06d3c2;
     width: 10px;
     height: 10px;
     position: absolute;
@@ -146,7 +146,7 @@
     position: fixed;
     display: block;
     z-index: 1000;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.5);
 }
 
 /*******************************

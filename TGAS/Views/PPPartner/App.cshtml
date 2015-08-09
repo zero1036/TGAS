@@ -98,6 +98,11 @@
     <link rel="stylesheet" href="/app/styles/weixin-btn.css" />
     <link rel="stylesheet" href="/app/styles/weixin-icon.css" />
     <link rel="stylesheet" href="/app/styles/partner/partnermain.css" />
-    <script data-main="/app/scripts/routes/partnerMain" src="/app/scripts/vendor/require.js"></script>
+
+    @{
+        var IsBuild = true;
+        var DataMainPath = IsBuild ? "/app/scripts/build/partnerMain-build" : "/app/scripts/routes/partnerMain";
+        <script data-main="@DataMainPath" src="/app/scripts/build/require.js"></script>
+    }
 </body>
 </html>

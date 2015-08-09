@@ -1,4 +1,4 @@
-﻿'use strict'
+﻿//'use strict'
 define(['angular'], function (services) {
     var services = angular.module('baseServiceModule', []);
     //身份验证服务
@@ -25,7 +25,7 @@ define(['angular'], function (services) {
                 $cookieStore.remove('user');
                 _user = null;
             }
-        }
+        };
     });
     //基础服务
     services.factory('commonService', function ($window, $cookieStore, $timeout) {
@@ -133,7 +133,7 @@ define(['angular'], function (services) {
             });
             str = str.substring(1);
             return str;
-        }
+        };
 
         service.doPostToken = function (api, action, param, url) {
             var result = {};

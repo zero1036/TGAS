@@ -172,12 +172,15 @@
   <ItemGroup>
     <Content Include="app\font\ionicons.svg" />
     <Content Include="app\images\pplogo.png" />
+    <Content Include="app\scripts\build\partnerMain-build.js" />
     <Content Include="app\scripts\controllers\loginCtrl.js" />
     <Content Include="app\scripts\controllers\partnerCtrl.js" />
     <Content Include="app\scripts\directives\directives.js" />
     <Content Include="app\scripts\filters\filters.js" />
     <Content Include="app\scripts\routes\partnerApp.js" />
+    <Content Include="app\scripts\routes\partnerConfig.js" />
     <Content Include="app\scripts\routes\partnerMain.js" />
+    <Content Include="app\scripts\routes\r.js" />
     <Content Include="app\scripts\services\commonService.js" />
     <Content Include="app\scripts\services\partnerService.js" />
     <Content Include="app\scripts\vendor\angular-file-uploader\angular-file-upload.js" />
@@ -225,7 +228,7 @@
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
-    <Content Include="app\scripts\vendor\require.js" />
+    <Content Include="app\scripts\build\require.js" />
     <Content Include="app\styles\animations.css" />
     <Content Include="app\styles\base.css" />
     <Content Include="app\styles\global.css" />

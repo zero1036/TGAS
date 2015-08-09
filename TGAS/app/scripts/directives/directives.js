@@ -1,5 +1,4 @@
 define(['angular'], function (angular) {
-    'use strict';
     var pdirectives = angular.module('directives', []);
     pdirectives.directive("articledisplay", function () {
         return {
