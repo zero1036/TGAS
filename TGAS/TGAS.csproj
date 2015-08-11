@@ -177,6 +177,7 @@
     <Content Include="app\scripts\controllers\loginCtrl.js" />
     <Content Include="app\scripts\controllers\partnerCtrl.js" />
     <Content Include="app\scripts\directives\directives.js" />
+    <Content Include="app\scripts\directives\tsb.js" />
     <Content Include="app\scripts\filters\filters.js" />
     <Content Include="app\scripts\routes\partnerApp.js" />
     <Content Include="app\scripts\routes\partnerConfig.js" />
