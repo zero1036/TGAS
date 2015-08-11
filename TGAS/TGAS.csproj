@@ -222,6 +222,7 @@
     <Content Include="app\scripts\vendor\domReady.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
+    <Content Include="app\scripts\vendor\me-pageloading.js" />
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
     <Content Include="app\scripts\build\require.js" />
     <Content Include="app\styles\animations.css" />
@@ -322,7 +323,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2621</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
