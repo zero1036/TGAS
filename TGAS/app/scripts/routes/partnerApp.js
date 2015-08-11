@@ -1,3 +1,3 @@
-﻿define(['angular', 'cookies', 'route', 'touch'], function (angular) {
-    return angular.module('pApp', ['partnerCtrls', 'authCtrls', 'ngRoute', 'ngCookies', 'ngTouch']);
+﻿define(['angular', 'cookies', 'route', 'touch', 'animate'], function (angular) {
+    return angular.module('pApp', ['ngRoute', 'ngCookies', 'ngTouch', 'ngAnimate', 'partnerCtrls', 'authCtrls']);
 });

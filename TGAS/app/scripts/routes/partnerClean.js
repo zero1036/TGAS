@@ -14,7 +14,7 @@ function cssMinifier(flieIn, fileOut) {
 
 cssMinifier([
     'styles/common/base.css',
-    'styles/common/animations.css',
+    //'styles/common/animations.css',
     'styles/common/weixin-grid.css',
     'styles/common/weixin-icon.css',
     'styles/common/weixin-panel.css',

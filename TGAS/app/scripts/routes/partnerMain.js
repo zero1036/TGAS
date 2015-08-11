@@ -1,14 +1,15 @@
 ﻿require.config({
     paths: {
         // Angular
-        angular: '../vendor/angular/angular',
-        cookies: '../vendor/angular/angular-cookies',
-        route: '../vendor/angular/angular-route',
-        touch: '../vendor/angular/angular-touch',
+        angular: '../vendor/angular/angular.min',
+        cookies: '../vendor/angular/angular-cookies.min',
+        route: '../vendor/angular/angular-route.min',
+        touch: '../vendor/angular/angular-touch.min',
+        animate: '../vendor/angular/angular-animate.min',
         // domReady
         domReady: '../vendor/domReady',
         // iscroll
-        iscroll: '../vendor/iscroll/iscroll'
+        iscroll: '../vendor/iscroll/iscroll.min',
     },
     shim: {
         /*
@@ -26,6 +27,9 @@
             deps: ['angular']
         },
         touch: {
+            deps: ['angular']
+        },
+        animate: {
             deps: ['angular']
         }
     },

@@ -1,7 +1,4 @@
-﻿@using TGAS
-@{
-    Layout = null;
-}
+﻿@using WHTR.WeiXinAPI.Common
 <!DOCTYPE html>
 <html lang="en" class="ng-app: pApp">
 <head>
@@ -47,7 +44,7 @@
                 }
     </style>
     @{
-        var strPath = ConfigManager.IsCloudStorage != null && ConfigManager.IsCloudStorage.Value ? "WeixinApp" : "app";
+        var strPath = ConfigManager.IsCloudStorage.IsNotNull() && ConfigManager.IsCloudStorage.Value ? "WeixinApp" : "app";
         var buildVersion = false;
         var mainJsName = buildVersion ? "partnerMain-build" : "partnerMain";
         var buildFile = buildVersion ? "build" : "routes";
@@ -58,8 +55,12 @@
         var src = ConfigManager.CloudUrlConvertor(
             string.Format("/{0}/scripts/vendor/require.js?v={1}", strPath, ConfigManager.CssJsVersion));
     }
+
 </head>
 <body ng-controller="partnerCtrl">
+    <form name="ft" id="f-token">
+        @Html.AntiForgeryToken()
+    </form>
     <div id="wi-div-waiting">
         <div class="spinner">
             <div class="cube cube0"></div>
@@ -80,7 +81,7 @@
             <div class="cube cube15"></div>
         </div>
     </div>
-    <div ng-view=""></div>
+    <div ng-view="" class="view-frame"></div>
     <div id="footer">
         <div class="row">
             <a href="#/home">
@@ -109,7 +110,7 @@
     else
     {
         <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/base.css" + "?v=" + ConfigManager.CssJsVersion)">
-        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/animations.css" + "?v=" + ConfigManager.CssJsVersion)">
+        @*<link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/animations.css" + "?v=" + ConfigManager.CssJsVersion)">*@
         <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-grid.css" + "?v=" + ConfigManager.CssJsVersion)">
         <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-icon.css" + "?v=" + ConfigManager.CssJsVersion)">
         <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-panel.css" + "?v=" + ConfigManager.CssJsVersion)">

@@ -31,6 +31,7 @@
         cookies: '../vendor/angular/angular-cookies.min',
         route: '../vendor/angular/angular-route.min',
         touch: '../vendor/angular/angular-touch.min',
+        animate: '../vendor/angular/angular-animate.min',
         // domReady
         domReady: '../vendor/domReady',
         // iscroll
@@ -52,6 +53,9 @@
             deps: ['angular']
         },
         touch: {
+            deps: ['angular']
+        },
+        animate: {
             deps: ['angular']
         }
     },
