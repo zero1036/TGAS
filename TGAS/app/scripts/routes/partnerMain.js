@@ -1,6 +1,6 @@
 ﻿require.config({
     paths: {
-        snap: 'http://cdn.staticfile.org/snap.svg/0.2.0/snap.svg-min',
+        snap: '../vendor/snap.svg-min',
         // Angular
         angular: '../vendor/angular/angular',
         cookies: '../vendor/angular/angular-cookies',
