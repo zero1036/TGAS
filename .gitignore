@@ -154,3 +154,5 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/TGAS.sln.GhostDoc.xml
+/TGAS/TGAS.csproj.GhostDoc.xml
