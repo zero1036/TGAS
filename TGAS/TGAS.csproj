@@ -179,6 +179,7 @@
     <Content Include="app\scripts\directives\directives.js" />
     <Content Include="app\scripts\filters\filters.js" />
     <Content Include="app\scripts\routes\partnerApp.js" />
+    <Content Include="app\scripts\routes\partnerClean.js" />
     <Content Include="app\scripts\routes\partnerConfig.js" />
     <Content Include="app\scripts\routes\partnerMain.js" />
     <Content Include="app\scripts\routes\r.js" />
@@ -224,8 +225,30 @@
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
     <Content Include="app\scripts\build\require.js" />
+    <Content Include="app\scripts\vendor\require.js" />
     <Content Include="app\styles\animations.css" />
     <Content Include="app\styles\base.css" />
+    <Content Include="app\styles\build\partnerClean.css" />
+    <Content Include="app\styles\build\partnermain.css" />
+    <Content Include="app\styles\common\animations.css" />
+    <Content Include="app\styles\common\base.css" />
+    <Content Include="app\styles\common\global.css" />
+    <Content Include="app\styles\common\islider.css" />
+    <Content Include="app\styles\common\layout.css" />
+    <Content Include="app\styles\common\navIcon.css" />
+    <Content Include="app\styles\common\page.css" />
+    <Content Include="app\styles\common\reset.css" />
+    <Content Include="app\styles\common\rlb.css" />
+    <Content Include="app\styles\common\ticket.css" />
+    <Content Include="app\styles\common\weixin-alert.css" />
+    <Content Include="app\styles\common\weixin-btn.css" />
+    <Content Include="app\styles\common\weixin-grid.css" />
+    <Content Include="app\styles\common\weixin-icon.css" />
+    <Content Include="app\styles\common\weixin-loading.css" />
+    <Content Include="app\styles\common\weixin-panel.css" />
+    <Content Include="app\styles\common\weixin-tooltip.css" />
+    <Content Include="app\styles\common\welcome.css" />
+    <Content Include="app\styles\common\welcomeRealName.css" />
     <Content Include="app\styles\global.css" />
     <Content Include="app\styles\ionic.css" />
     <Content Include="app\styles\ionic.min.css" />
@@ -304,6 +327,9 @@
     <Content Include="app\font\icomoon.eot" />
     <Content Include="app\font\icomoon.ttf" />
     <Content Include="app\font\icomoon.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\autoCompress.bat" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
