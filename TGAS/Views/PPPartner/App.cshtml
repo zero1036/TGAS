@@ -1,4 +1,5 @@
-﻿@{
+﻿@using TGAS
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -45,6 +46,18 @@
                     text-shadow: none;
                 }
     </style>
+    @{
+        var strPath = ConfigManager.IsCloudStorage != null && ConfigManager.IsCloudStorage.Value ? "WeixinApp" : "app";
+        var buildVersion = false;
+        var mainJsName = buildVersion ? "partnerMain-build" : "partnerMain";
+        var buildFile = buildVersion ? "build" : "routes";
+        //dataMain path
+        var dataMain = ConfigManager.CloudUrlConvertor(
+            string.Format("/{0}/scripts/{1}/{2}.js?v={3}", strPath, buildFile, mainJsName, ConfigManager.CssJsVersion));
+        //requireJS path
+        var src = ConfigManager.CloudUrlConvertor(
+            string.Format("/{0}/scripts/vendor/require.js?v={1}", strPath, ConfigManager.CssJsVersion));
+    }
 </head>
 <body ng-controller="partnerCtrl">
     <div id="wi-div-waiting">
@@ -87,21 +100,24 @@
             </a>
         </div>
     </div>
-    @*首先加载weixin-loading*@
-    <link rel="stylesheet" href="/app/styles/weixin-loading.css" />
-
-    <link rel="stylesheet" href="/app/styles/base.css" />
-    <link rel="stylesheet" href="/app/styles/animations.css" />
-    <link rel="stylesheet" href="/app/styles/weixin-grid.css" />
-    <link rel="stylesheet" href="/app/styles/weixin-panel.css" />
-    <link rel="stylesheet" href="/app/styles/weixin-btn.css" />
-    <link rel="stylesheet" href="/app/styles/weixin-icon.css" />
-    <link rel="stylesheet" href="/app/styles/partner/partnermain.css" />
-
-    @{
-        var IsBuild = false;
-        var DataMainPath = IsBuild ? "/app/scripts/build/partnerMain-build" : "/app/scripts/routes/partnerMain";
-        <script data-main="@DataMainPath" src="/app/scripts/build/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-loading.css" + "?v=" + ConfigManager.CssJsVersion)">
+    @if (buildVersion)
+    {
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/build/partnerClean.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/build/partnermain.css" + "?v=" + ConfigManager.CssJsVersion)">
     }
+    else
+    {
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/base.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/animations.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-grid.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-icon.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-panel.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/common/weixin-alert.css" + "?v=" + ConfigManager.CssJsVersion)">
+        <link rel="stylesheet" type="text/css" href="@ConfigManager.CloudUrlConvertor("/" + strPath + "/styles/partner/partnermain.css" + "?v=" + ConfigManager.CssJsVersion)">
+    }
+
+    @*<script id="s1" data-main="/app/scripts/routes/partnerMain" src="/app/scripts/vendor/require.js"></script>*@
+    <script data-main="@dataMain" src="@src"></script>
 </body>
 </html>
