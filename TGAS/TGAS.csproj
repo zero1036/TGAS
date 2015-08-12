@@ -181,6 +181,7 @@
     <Content Include="app\scripts\routes\partnerApp.js" />
     <Content Include="app\scripts\routes\partnerConfig.js" />
     <Content Include="app\scripts\routes\partnerMain.js" />
+    <Content Include="app\scripts\routes\ptMain.js" />
     <Content Include="app\scripts\routes\r.js" />
     <Content Include="app\scripts\services\commonService.js" />
     <Content Include="app\scripts\services\partnerService.js" />
@@ -219,11 +220,15 @@
     <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.js" />
     <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.min.js" />
     <Content Include="app\scripts\vendor\angular\bootstrap\js\npm.js" />
+    <Content Include="app\scripts\vendor\backbone.min.js" />
     <Content Include="app\scripts\vendor\domReady.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.min.js" />
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
     <Content Include="app\scripts\build\require.js" />
+    <Content Include="app\scripts\vendor\require.js" />
+    <Content Include="app\scripts\vendor\underscore.min.js" />
+    <Content Include="app\scripts\vendor\zepto.min.js" />
     <Content Include="app\styles\animations.css" />
     <Content Include="app\styles\base.css" />
     <Content Include="app\styles\global.css" />
@@ -304,6 +309,9 @@
     <Content Include="app\font\icomoon.eot" />
     <Content Include="app\font\icomoon.ttf" />
     <Content Include="app\font\icomoon.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PPPartner\AppB.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

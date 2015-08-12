@@ -20,5 +20,11 @@ namespace TGAS.Controllers
         {
             return View();
         }
+
+
+        public ActionResult AppB()
+        {
+            return View();
+        }
     }
 }
