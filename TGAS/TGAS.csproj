@@ -179,6 +179,7 @@
     <Content Include="app\scripts\directives\directives.js" />
     <Content Include="app\scripts\filters\filters.js" />
     <Content Include="app\scripts\routes\partnerApp.js" />
+    <Content Include="app\scripts\routes\partnerClean.js" />
     <Content Include="app\scripts\routes\partnerConfig.js" />
     <Content Include="app\scripts\routes\partnerMain.js" />
     <Content Include="app\scripts\routes\ptMain.js" />
@@ -227,34 +228,36 @@
     <Content Include="app\scripts\vendor\me-pageloading.min.js" />
     <Content Include="app\scripts\build\require.js" />
     <Content Include="app\scripts\vendor\require.js" />
+    <Content Include="app\scripts\vendor\template-debug.js" />
+    <Content Include="app\scripts\vendor\template.js" />
     <Content Include="app\scripts\vendor\underscore.min.js" />
     <Content Include="app\scripts\vendor\zepto.min.js" />
-    <Content Include="app\styles\animations.css" />
-    <Content Include="app\styles\base.css" />
-    <Content Include="app\styles\global.css" />
-    <Content Include="app\styles\ionic.css" />
-    <Content Include="app\styles\ionic.min.css" />
-    <Content Include="app\styles\islider.css" />
-    <Content Include="app\styles\layout.css" />
-    <Content Include="app\styles\weixin-loading.css" />
-    <Content Include="app\styles\navIcon.css" />
-    <Content Include="app\styles\page.css" />
+    <Content Include="app\styles\build\partnerClean.css" />
+    <Content Include="app\styles\build\partnermain.css" />
+    <Content Include="app\styles\common\animations.css" />
+    <Content Include="app\styles\common\base.css" />
+    <Content Include="app\styles\common\global.css" />
+    <Content Include="app\styles\common\islider.css" />
+    <Content Include="app\styles\common\layout.css" />
+    <Content Include="app\styles\common\navIcon.css" />
+    <Content Include="app\styles\common\page.css" />
+    <Content Include="app\styles\common\reset.css" />
+    <Content Include="app\styles\common\rlb.css" />
+    <Content Include="app\styles\common\ticket.css" />
+    <Content Include="app\styles\common\weixin-alert.css" />
+    <Content Include="app\styles\common\weixin-btn.css" />
+    <Content Include="app\styles\common\weixin-grid.css" />
+    <Content Include="app\styles\common\weixin-icon.css" />
+    <Content Include="app\styles\common\weixin-loading.css" />
+    <Content Include="app\styles\common\weixin-panel.css" />
+    <Content Include="app\styles\common\weixin-tooltip.css" />
+    <Content Include="app\styles\common\welcome.css" />
+    <Content Include="app\styles\common\welcomeRealName.css" />
     <Content Include="app\styles\partner\partnerinfo.css" />
     <Content Include="app\styles\partner\partnerjoin.css" />
     <Content Include="app\styles\partner\partnermain.css" />
     <Content Include="app\styles\partner\ppPartner.css" />
     <Content Include="app\styles\partner\ppPartnerJoin.css" />
-    <Content Include="app\styles\reset.css" />
-    <Content Include="app\styles\rlb.css" />
-    <Content Include="app\styles\ticket.css" />
-    <Content Include="app\styles\weixin-alert.css" />
-    <Content Include="app\styles\weixin-btn.css" />
-    <Content Include="app\styles\weixin-grid.css" />
-    <Content Include="app\styles\weixin-icon.css" />
-    <Content Include="app\styles\weixin-panel.css" />
-    <Content Include="app\styles\weixin-tooltip.css" />
-    <Content Include="app\styles\welcome.css" />
-    <Content Include="app\styles\welcomeRealName.css" />
     <Content Include="app\views\login.html" />
     <Content Include="app\views\login\login.html" />
     <Content Include="app\views\partner\home.html" />
@@ -312,6 +315,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\PPPartner\AppB.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\autoCompress.bat" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
