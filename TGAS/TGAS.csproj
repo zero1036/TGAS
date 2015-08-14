@@ -173,56 +173,14 @@
   <ItemGroup>
     <Content Include="app\font\icomoon.svg" />
     <Content Include="app\images\pplogo.png" />
-    <Content Include="app\scripts\build\partnerMain-build.js" />
     <Content Include="app\scripts\build\ptMain-build.js" />
-    <Content Include="app\scripts\controllers\loginCtrl.js" />
-    <Content Include="app\scripts\controllers\partnerCtrl.js" />
-    <Content Include="app\scripts\directives\directives.js" />
-    <Content Include="app\scripts\filters\filters.js" />
-    <Content Include="app\scripts\routes\partnerApp.js" />
-    <Content Include="app\scripts\routes\partnerClean.js" />
-    <Content Include="app\scripts\routes\partnerConfig.js" />
-    <Content Include="app\scripts\routes\partnerMain.js" />
+    <Content Include="app\scripts\common\common.js" />
+    <Content Include="app\scripts\controller\homeCtrl.js" />
+    <Content Include="app\scripts\controller\yjdetailsCtrl.js" />
+    <Content Include="app\scripts\controller\yjincreaseCtrl.js" />
     <Content Include="app\scripts\routes\ptConfig.js" />
     <Content Include="app\scripts\routes\ptMain.js" />
     <Content Include="app\scripts\routes\r.js" />
-    <Content Include="app\scripts\services\commonService.js" />
-    <Content Include="app\scripts\services\partnerService.js" />
-    <Content Include="app\scripts\vendor\angular-file-uploader\angular-file-upload.js" />
-    <Content Include="app\scripts\vendor\angular-file-uploader\angular-file-upload.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-animate.js" />
-    <Content Include="app\scripts\vendor\angular\angular-animate.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-aria.js" />
-    <Content Include="app\scripts\vendor\angular\angular-aria.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-cookies.js" />
-    <Content Include="app\scripts\vendor\angular\angular-cookies.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-csp.css" />
-    <Content Include="app\scripts\vendor\angular\angular-loader.js" />
-    <Content Include="app\scripts\vendor\angular\angular-loader.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-messages.js" />
-    <Content Include="app\scripts\vendor\angular\angular-messages.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-mocks.js" />
-    <Content Include="app\scripts\vendor\angular\angular-resource.js" />
-    <Content Include="app\scripts\vendor\angular\angular-resource.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-route.js" />
-    <Content Include="app\scripts\vendor\angular\angular-route.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-sanitize.js" />
-    <Content Include="app\scripts\vendor\angular\angular-sanitize.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-scenario.js" />
-    <Content Include="app\scripts\vendor\angular\angular-touch.js" />
-    <Content Include="app\scripts\vendor\angular\angular-touch.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-translate-loader-partial\angular-translate-loader-partial.js" />
-    <Content Include="app\scripts\vendor\angular\angular-translate-loader-partial\angular-translate-loader-partial.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular-translate\angular-translate.js" />
-    <Content Include="app\scripts\vendor\angular\angular-translate\angular-translate.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular.js" />
-    <Content Include="app\scripts\vendor\angular\angular.min.js" />
-    <Content Include="app\scripts\vendor\angular\angular.un.js" />
-    <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap-dropdown.min.js" />
-    <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap-tab.min.js" />
-    <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.js" />
-    <Content Include="app\scripts\vendor\angular\bootstrap\js\bootstrap.min.js" />
-    <Content Include="app\scripts\vendor\angular\bootstrap\js\npm.js" />
     <Content Include="app\scripts\vendor\backbone.min.js" />
     <Content Include="app\scripts\vendor\domReady.js" />
     <Content Include="app\scripts\vendor\iscroll\iscroll.js" />
@@ -288,25 +246,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\scripts\vendor\angular\angular-translate-storage-cookie\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="app\scripts\vendor\angular\angular-animate.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-aria.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-cookies.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-loader.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-messages.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-resource.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-route.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-sanitize.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-touch.min.js.map" />
-    <Content Include="app\scripts\vendor\angular\angular-translate-loader-partial\bower.json" />
-    <Content Include="app\scripts\vendor\angular\angular-translate-loader-partial\README.md" />
-    <Content Include="app\scripts\vendor\angular\angular-translate\bower.json" />
-    <Content Include="app\scripts\vendor\angular\angular-translate\README.md" />
-    <Content Include="app\scripts\vendor\angular\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\PPPartner\App.cshtml" />

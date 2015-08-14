@@ -1,10 +1,4 @@
-﻿<!--<div>
-    PP合伙人
-    {{name}}
-    <button ng-click="add()">add</button>
-</div>-->
-
-<div class="container pt-page-moveFromTop">
+﻿<div class="container pt-page-moveFromTop">
     <div class='fri-wrap'>
         <div class="partner-content row">
             <div class="column column-6 bd-right bd-white-50 p5">
@@ -13,7 +7,7 @@
                     <p class="f24 mb10 shadow">123</p>
                 </div>
                 <div>
-                    <p class="f13 mt10">今日预计佣金（元）</p>
+                    <p class="f13 mt10">今日预计佣金（{{name}}）</p>
                     <p class="f24 shadow p-yj-on">1234</p>
                     <p class="f24 shadow p-yj-off">暂停</p>
                     <span class='partner-icon-list p-yj-off circle-bg success-s-white h20 wd20' style="top:90px;left:60px;font-size:1em">?</span>
@@ -65,7 +59,7 @@
                 </p>
                 <p class="t-a-c f13 mt5">微信</p>
             </a>
-            <a href="javascript:void(0);" id="btn-code">
+            <a href="javascript:void(0);" class="more" id="btn-code">
                 <p class="circle-bg star-white h60 wd60">
                     <span class="icon icon-qrcode text-white f30"></span>
                 </p>
