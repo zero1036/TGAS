@@ -1,31 +1,93 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using TGAS
+@{
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en" class="ng-app: pApp">
+<head>
+    <meta charset="UTF-8">
+    <!--IE兼容标签-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui" />
+    <!--启动webapp功能，会删除默认的苹果工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!--忽略页面中的数字识别为电话号码-->
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!--默认使用webkit内核进行渲染-->
+    <meta name="renderer" content="webkit">
+    <title>PPmoney理财平台</title>
+    <style>
+        #footer {
+            position: fixed;
+            z-index: 2;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 48px;
+            background-color: #06d3c2;
+            color: white;
+            padding: 0;
+            border-top: 1px solid #1edece;
+        }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            #footer div.column {
+                text-align: center;
+                height: 48px;
+                color: #ffffff;
+                text-shadow: 1px 1px 4px #0d9c90;
+            }
+
+                #footer div.column:active {
+                    background-color: #1edece;
+                    text-shadow: none;
+                }
+    </style>
+</head>
+<body ng-controller="partnerCtrl">
+    <div id="wi-div-waiting">
+        <div class="spinner">
+            <div class="cube cube0"></div>
+            <div class="cube cube1"></div>
+            <div class="cube cube2"></div>
+            <div class="cube cube3"></div>
+            <div class="cube cube4"></div>
+            <div class="cube cube5"></div>
+            <div class="cube cube6"></div>
+            <div class="cube cube7"></div>
+            <div class="cube cube8"></div>
+            <div class="cube cube9"></div>
+            <div class="cube cube10"></div>
+            <div class="cube cube11"></div>
+            <div class="cube cube12"></div>
+            <div class="cube cube13"></div>
+            <div class="cube cube14"></div>
+            <div class="cube cube15"></div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div ng-view=""></div>
+    <div id="footer">
+        <div class="row">
+            <a href="#/home">
+                <div class="column column-4 p10">
+                    <span>PP合伙人</span>
+                </div>
+            </a>
+            <a href="#/yjdetails">
+                <div class="column column-4 p10">
+                    <span>佣金详情</span>
+                </div>
+            </a>
+            <a href="#/yjincrease">
+                <div class="column column-4 p10">
+                    <span>佣金提升</span>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+</body>
+</html>
