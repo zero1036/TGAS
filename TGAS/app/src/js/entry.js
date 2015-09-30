@@ -3,6 +3,7 @@
 var app = require("./com/app.js");
 
 require("./controller/mainCtrl.js");
+require("./controller/homeCtrl.js");
 
 //权限级别
 app.constant('ACCESS_LEVELS', {
@@ -15,7 +16,8 @@ app.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
     function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
         $routeProvider
         .when('/', {
-            template: '<p>lin</p>',
+            templateUrl: './src/html/home.html',
+            controller: 'homeCtrl',
             access_level: ACCESS_LEVELS.pub
         })
         .otherwise({ redirectTo: '/' });

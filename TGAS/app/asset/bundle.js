@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "326870f4ef49b7de2d9c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b6fe5003aa6511404f63"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -642,7 +642,7 @@
 		}
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, "?http://192.168.0.20:3000"))
+	/* WEBPACK VAR INJECTION */}.call(exports, "?http://192.168.100.122:3000"))
 
 /***/ },
 /* 2 */
@@ -9375,100 +9375,78 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	
+	__webpack_require__(62);
 	//加载angular app
-	var app = __webpack_require__(62);
+	var app = __webpack_require__(66);
 	
-	////权限级别
-	//app.constant('ACCESS_LEVELS', {
-	//    pub: 1,
-	//    user: 2
-	//});
+	__webpack_require__(70);
 	
+	//权限级别
+	app.constant('ACCESS_LEVELS', {
+	    pub: 1,
+	    user: 2
+	});
 	
-	////配置路由
-	//app.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
-	//    function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
-	//        $routeProvider
-	//        .when('/', {
-	//            templateUrl: '/content/src/html/home.html',
-	//            access_level: ACCESS_LEVELS.pub
-	//        })
-	//        .when('/home', {
-	//            templateUrl: '/content/src/html/home.html',
-	//            access_level: ACCESS_LEVELS.pub
-	//        })
-	//        .when('/img', {
-	//            templateUrl: '/content/src/html/img.html',
-	//            controller: 'imgCtrl',
-	//            access_level: ACCESS_LEVELS.pub
-	//        })
-	//         .when('/banner', {
-	//             templateUrl: '/content/src/html/banner.html',
-	//             controller: 'bannerCtrl',
-	//             access_level: ACCESS_LEVELS.pub
-	//         })
-	//         .when('/setting', {
-	//             templateUrl: '/content/src/html/setting.html',
-	//             controller: 'settingCtrl',
-	//             access_level: ACCESS_LEVELS.pub
-	//         })
-	//             .when('/abc', {
-	//                 templateUrl: '/content/src/html/banner.html',
-	//                 controller: 'bannerCtrl',
-	//                 access_level: ACCESS_LEVELS.pub
-	//             })
-	//        .otherwise({ redirectTo: '/' });
+	//配置路由
+	app.config(['$routeProvider', '$httpProvider', 'ACCESS_LEVELS',
+	    function ($routeProvider, $httpProvider, ACCESS_LEVELS) {
+	        $routeProvider
+	        .when('/', {
+	            template: '<p>linddd</p>',
+	            access_level: ACCESS_LEVELS.pub
+	        })
+	        .otherwise({ redirectTo: '/' });
 	
 	
-	//        $httpProvider.defaults.withCredentials = true;
-	//        $httpProvider.defaults.useXDomain = true;
-	//        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+	        $httpProvider.defaults.withCredentials = true;
+	        $httpProvider.defaults.useXDomain = true;
+	        delete $httpProvider.defaults.headers.common['X-Requested-With'];
 	
-	//        $httpProvider.interceptors.push(function ($q, $location, $rootScope) {
-	//            return {
-	//                'response': function (resp) {
-	//                    //if (resp.config.url == 'api/Login/Login') {
-	//                    //    // 假设API服务器返回的数据格式如下:
-	//                    //    // { token: "AUTH_TOKEN" }
-	//                    //    authService.setToken(resp.data.token);
-	//                    //}
-	//                    return resp;
-	//                },
-	//                'responseError': function (rejection) {
-	//                    // 错误处理
-	//                    switch (rejection.status) {
-	//                        case 401:
-	//                            if (rejection.config.url !== 'api/login')
-	//                                // 如果当前不是在登录页面
-	//                                $rootScope.$broadcast('auth:loginRequired');
-	//                            break;
-	//                        case 403:
-	//                            $rootScope.$broadcast('auth:forbidden');
-	//                            break;
-	//                        case 404:
-	//                            $rootScope.$broadcast('page:notFound');
-	//                            break;
-	//                        case 500:
-	//                            $rootScope.$broadcast('server:error');
-	//                            break;
-	//                    }
-	//                    return $q.reject(rejection);
-	//                }
-	//            };
-	//        });
-	//    }
-	//]);
+	        $httpProvider.interceptors.push(function ($q, $location, $rootScope) {
+	            return {
+	                'response': function (resp) {
+	                    //if (resp.config.url == 'api/Login/Login') {
+	                    //    // 假设API服务器返回的数据格式如下:
+	                    //    // { token: "AUTH_TOKEN" }
+	                    //    authService.setToken(resp.data.token);
+	                    //}
+	                    return resp;
+	                },
+	                'responseError': function (rejection) {
+	                    // 错误处理
+	                    switch (rejection.status) {
+	                        case 401:
+	                            if (rejection.config.url !== 'api/login')
+	                                // 如果当前不是在登录页面
+	                                $rootScope.$broadcast('auth:loginRequired');
+	                            break;
+	                        case 403:
+	                            $rootScope.$broadcast('auth:forbidden');
+	                            break;
+	                        case 404:
+	                            $rootScope.$broadcast('page:notFound');
+	                            break;
+	                        case 500:
+	                            $rootScope.$broadcast('server:error');
+	                            break;
+	                    }
+	                    return $q.reject(rejection);
+	                }
+	            };
+	        });
+	    }
+	]);
 	
-	////配置路由变更监听
-	//app.run(function ($rootScope, $location) {
-	//    // 给$routeChangeStart设置监听
-	//    $rootScope.$on('$routeChangeStart', function (evt, next, curr) {
-	//        console.log("abc");
-	//    });
-	//});
+	//配置路由变更监听
+	app.run(function ($rootScope, $location) {
+	    // 给$routeChangeStart设置监听
+	    $rootScope.$on('$routeChangeStart', function (evt, next, curr) {
+	        console.log("abc");
+	    });
+	});
 	
-	////初始化angular
-	//angular.bootstrap(document, ['wxApp']);
+	//初始化angular
+	angular.bootstrap(document, ['wxApp']);
 	
 
 
@@ -9476,40 +9454,368 @@
 /* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(63);
-	__webpack_require__(64);
-	__webpack_require__(65);
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
-	var app = angular.module('wxApp', ['ngRoute', 'services', 'directives', 'controllers']);
-	
-	module.exports = app;
+	// load the styles
+	var content = __webpack_require__(63);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(65)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(true) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept(63, function() {
+				var newContent = __webpack_require__(63);
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, module) {
-	    module.exports = angular.module('controllers', []);
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	exports = module.exports = __webpack_require__(64)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "/*\r\n *blue:#45b8ef;\r\n *green:#7ed095;\r\n *red:#fe4850;\r\n *gray:#d4d3d3;\r\n *steelblue:#1194d3;\r\n *bangdingkai:#bc69f7;\r\n */\r\n.m10{margin: 10px;}\r\n.mt5{margin-top: 5px;}\r\n.mt10{margin-top: 10px;}\r\n.mt15{margin-top: 15px;}\r\n.mt20{margin-top: 20px;}\r\n.mt30{margin-top: 30px;}\r\n.mt40{margin-top: 40px;}\r\n.mt50{margin-top: 50px;}\r\n.mt60{margin-top: 60px;}\r\n.mt70{margin-top: 70px;}\r\n.mt80{margin-top: 80px;}\r\n\r\n.mr5{margin-right: 5px;}\r\n.mr10{margin-right: 10px;}\r\n.mr15{margin-right: 15px;}\r\n.mr20{margin-right: 20px;}\r\n.mr30{margin-right: 30px;}\r\n.mr40{margin-right: 40px;}\r\n.mr50{margin-right: 50px;}\r\n.mr60{margin-right: 60px;}\r\n.mr70{margin-right: 70px;}\r\n\r\n\r\n.ml0{margin-left: 0 !important;}\r\n.ml2{margin-left:2px;}\r\n.ml5{margin-left: 5px;}\r\n.ml10{margin-left: 10px;}\r\n.ml15{margin-left: 15px;}\r\n.ml20{margin-left: 20px;}\r\n.ml30{margin-left: 30px;}\r\n.mb5{margin-bottom:5px;}\r\n.mb10{margin-bottom: 10px;}\r\n.mb15{margin-bottom: 15px;}\r\n.mb20{margin-bottom: 20px;}\r\n.mb30{margin-bottom: 30px;}\r\n.mb40{margin-bottom: 40px;}\r\n.mb50{margin-bottom: 50px;}\r\n.mb60{margin-bottom: 60px;}\r\n.mb70{margin-bottom: 70px;}\r\n.mb80{margin-bottom: 80px;}\r\n.text-white{color: #fff;}\r\n.text-danger{color: #fe4850;}\r\n.text-info{color:#45b8ef;}\r\n.text-default{color:#949494;}\r\n.text-primary{color:#45b8ef;}\r\n.text-black{color:#1a1a1a;}\r\n.text-gray{color: rgb( 95, 95, 95 );}\r\n.text-danger{color: #f3031f;}\r\n.text-default{color: #45b8ef;}\r\n.text-disable{color: #e0e3e3;}\r\n.text-waring{color: rgba(230, 126, 34,1)}\r\n.text-success{color: #12b951;}\r\n.text-yellow{color: #eed018;}\r\n.text-yellow-s{color :#fcff00;}\r\n.p5{padding: 5px !important}\r\n.p10{padding: 10px !important}\r\n.p15{padding: 15px !important}\r\n.p20{padding: 20px !important}\r\n.pt10{padding-top:10px;}\r\n.pl0{padding-left: 0 !important}\r\n.pl20{padding-left: 20px;}\r\n.pl30{padding-left: 30px !important;}\r\n.pl-l00{padding-left: 100px !important}\r\n.w100{margin-left: auto;margin-right:auto;width: 100%;}\r\n.w90{margin-left: auto;margin-right:auto;width: 90%;}\r\n.w95{margin-left: auto;margin-right:auto;width: 95%;}\r\n.w80{margin-left: auto;margin-right:auto;width: 80%;}\r\n.w70{margin-left: auto;margin-right:auto;width: 70%;}\r\n.w60{margin-left: auto;margin-right:auto;width: 60%}\r\n.w50{margin-left: auto;margin-right:auto;width: 50%}\r\n.w40{margin-left: auto;margin-right:auto;width: 40%}\r\n.w30{margin-left: auto;margin-right:auto;width: 30%}\r\n.wd5{width: 5px;}\r\n.wd10{width: 10px;}\r\n.wd20{width: 20px;}\r\n.wd30{width: 30px;}\r\n.wd60{width: 60px;}\r\n.wd70{width: 70px;}\r\n.wd100{width: 100px;}\r\n.h10{height: 10px;}\r\n.h20{height: 20px;}\r\n.h30{height: 30px;}\r\n.h60{height: 60px;}\r\n.h70{height: 70px;}\r\n.h100{height: 100px;}\r\n.f10{font-size: 10px !important;}\r\n.f12{font-size: 12px !important;}\r\n.f13{font-size: 13px !important;}\r\n.f14{font-size: 14px !important;}\r\n.f15{font-size: 15px !important;}\r\n.f16{font-size: 16px !important;}\r\n.f17{font-size: 17px !important;}\r\n.f18{font-size: 18px !important;}\r\n.f19{font-size: 19px !important;}\r\n.f20{font-size: 20px !important;}\r\n.f21{font-size: 21px !important;}\r\n.f22{font-size: 22px !important;}\r\n.f23{font-size: 23px !important;}\r\n.f24{font-size: 24px !important;}\r\n.f25{font-size: 25px !important;}\r\n.f30{font-size: 30px !important;}\r\n.f40{font-size: 40px !important;}\r\n.fw-b{font-weight: bold;}\r\n.pr{position: relative;}\r\n.t-a-l{text-align: left;}\r\n.t-a-c{text-align: center;}\r\n.t-a-r{text-align: right;}\r\n.t-60{top:-60px;}\r\n.text-gray{color: rgb( 95, 95, 95 );\t}\r\n.text-danger{color: #f3031f;}\r\n.text-default{color: #45b8ef;}\r\n.text-disable{color: #e0e3e3;}\r\n.text-waring{color: rgba(230, 126, 34,1)}\r\n.text-success{color: #12b951;}\r\n.text-nowrap{white-space : nowrap ;}\r\n.text-overflow-e{\r\n    overflow: hidden; \r\n    text-overflow : ellipsis;\r\n}\r\n.display-n{display: none;}\r\n.hide{display: none !important;}\r\n.show{display: block !important}\r\n/*未知父级大小情况下居中*/\r\n.center{\r\n\tposition: absolute;\r\n\ttop:50%;\r\n\tleft:50%;\r\n\t-webkit-transform:translate(-50%,-50%);\r\n\ttransform:translate(-50%,-50%);\r\n}\r\n\r\n.vertical-center{\r\n    position: absolute;\r\n\ttop:50%;\r\n    left:0;\r\n\t-webkit-transform:translate(0,-50%);\r\n\ttransform:translate(0,-50%);\r\n}\r\n.horizontal-center{\r\n    position: absolute;\r\n\tleft:50%;\r\n    top:0;\r\n\t-webkit-transform:translate(-50%,0);\r\n\ttransform:translate(-50%,0);\r\n}\r\n.no-border{border-style:none !important;}\r\n", ""]);
+	
+	// exports
 
 
 /***/ },
 /* 64 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, module) {
-	    module.exports = angular.module('services', []);
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
 
 
 /***/ },
 /* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, module) {
-	    module.exports = angular.module('directives', []);
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0;
+	
+	module.exports = function(list, options) {
+		if(false) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function createStyleElement() {
+		var styleElement = document.createElement("style");
+		var head = getHeadElement();
+		styleElement.type = "text/css";
+		head.appendChild(styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement() {
+		var linkElement = document.createElement("link");
+		var head = getHeadElement();
+		linkElement.rel = "stylesheet";
+		head.appendChild(linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement());
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement();
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				styleElement.parentNode.removeChild(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement();
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				styleElement.parentNode.removeChild(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
 
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(67);
+	__webpack_require__(68);
+	__webpack_require__(69);
+	
+	var app = angular.module('wxApp', ['ngRoute', 'services', 'directives', 'controllers']);
+	
+	module.exports = app;
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	module.exports = angular.module('controllers', []);
+	
+
+
+/***/ },
+/* 68 */
+/***/ function(module, exports) {
+
+	module.exports = angular.module('services', []);
+	
+
+
+/***/ },
+/* 69 */
+/***/ function(module, exports) {
+
+	module.exports = angular.module('directives', []);
+	
+
+
+/***/ },
+/* 70 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var controllers = __webpack_require__(67);
+	
+	controllers.controller('mainCtrl', ['$scope', function ($scope) {
+	    $scope.name = "lin45324";
+	}]);
 
 /***/ }
 /******/ ]);

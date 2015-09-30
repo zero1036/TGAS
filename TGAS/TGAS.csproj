@@ -172,6 +172,7 @@
     <Content Include="app\src\html\home.html" />
     <Content Include="app\src\js\com\app.js" />
     <Content Include="app\src\js\controller\controllers.js" />
+    <Content Include="app\src\js\controller\homeCtrl.js" />
     <Content Include="app\src\js\controller\mainCtrl.js" />
     <Content Include="app\src\js\entry.js" />
     <Content Include="app\src\font\icomoon.svg" />
@@ -216,6 +217,7 @@
     <Content Include="app\src\js\service\services.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="server.config.js" />
     <Content Include="server.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
